@@ -173,6 +173,7 @@
   .pill:hover{color:var(--ink);border-color:var(--faint);text-shadow:-1.5px 0 var(--red),1.5px 0 var(--cyan)}
 
   /* ---------- video ---------- */
+  .video-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
   .video-frame{position:relative;aspect-ratio:16/9;border:1px solid var(--line);background:#000}
   .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
   .video-cap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:.8rem}
@@ -243,7 +244,7 @@
     .hero-img::after{background:linear-gradient(to top,var(--bg) 0,transparent 45%)}
     .hero-text{padding-top:0;margin-top:-4.5rem;padding-bottom:3rem}
     .scroll-hint{display:none}
-    .bio-grid,.sound-grid,.contact-grid{grid-template-columns:1fr}
+    .bio-grid,.sound-grid,.contact-grid,.video-grid{grid-template-columns:1fr}
     .photo-grid{grid-template-columns:repeat(2,1fr)}
     .ph.wide{grid-column:span 2}
     .stats{grid-template-columns:1fr 1fr}
@@ -388,14 +389,27 @@
 <section id="video">
   <div class="wrap">
     <div class="sec-head">03 — video</div>
-    <div class="video-frame">
-      <iframe src="https://www.youtube-nocookie.com/embed/diFCHYeS8tg"
-        title="nomu — all of it ft. mental (music video)" loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+    <div class="video-grid">
+      <div>
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/diFCHYeS8tg"
+            title="nomu — all of it ft. mental (official music video)" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-cap"><figcaption>“all of it” ft. mental — official video</figcaption></div>
+      </div>
+      <div>
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/RU4EpTFxZbc"
+            title="nomu — butterfly (official music video)" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-cap"><figcaption>“butterfly” — official video</figcaption></div>
+      </div>
     </div>
     <div class="video-cap">
-      <figcaption>“all of it” ft. mental — official video</figcaption>
       <a class="dl" href="https://youtu.be/b4Gw4XlHBwg" target="_blank" rel="noopener">watch interview ↗</a>
     </div>
   </div>
