@@ -190,6 +190,12 @@
     margin-top:2.6rem;max-width:62ch;color:var(--dim);font-size:.95rem;line-height:1.85;
   }
   .live-note strong{color:var(--ink);font-weight:500}
+  .rider{margin-top:2.2rem;border:1px solid var(--line);padding:1.4rem 1.6rem;max-width:62ch}
+  .rider-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;color:var(--faint);margin-bottom:.9rem}
+  .rider ul{list-style:none}
+  .rider li{font-family:var(--mono);font-size:.74rem;color:var(--dim);line-height:1.9;padding-left:1.2rem;position:relative}
+  .rider li+li{margin-top:.5rem}
+  .rider li::before{content:"—";position:absolute;left:0;color:var(--faint)}
 
   /* ---------- photos ---------- */
   .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-flow:dense;gap:clamp(.8rem,2vw,1.6rem)}
@@ -476,6 +482,14 @@
       <strong>glitch / datamosh visuals</strong> behind him are software he
       wrote, generated in real time at every show.
     </p>
+    <div class="rider">
+      <div class="rider-head">tech rider</div>
+      <ul>
+        <li>full set runs from a macbook through a focusrite scarlett 2i2 — no backline needed</li>
+        <li>venue provides: one xlr vocal mic + stand, and a feed from the 2i2’s two ¼″ line outputs to foh</li>
+        <li>output can be sent as a dual-mono split — vocals panned left, backing track panned right — so foh can level vocals and track independently</li>
+      </ul>
+    </div>
   </div>
 </section>
 
