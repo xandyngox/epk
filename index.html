@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nomu. — electronic press kit</title>
+<meta name="description" content="nomu. — seattle-based hyperpop / glitch-pop / experimental electronic artist. electronic press kit: bio, music, live history, press photos, booking.">
+<meta property="og:title" content="nomu. — electronic press kit">
+<meta property="og:description" content="seattle-based hyperpop / glitch-pop / experimental electronic. booking: whereisnomu@gmail.com">
+<meta property="og:image" content="https://xandyngox.github.io/epk/assets/img/nomu-7164.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0a'/><text x='50' y='72' font-size='64' text-anchor='middle' fill='%23e8e8e8' font-family='monospace'>n.</text></svg>">
+<style>
+  :root{
+    --bg:#0a0a0a;
+    --bg2:#101010;
+    --ink:#e8e8e6;
+    --dim:#9a9a96;
+    --faint:#5c5c58;
+    --line:#1f1f1d;
+    --red:rgba(255,42,72,.55);
+    --cyan:rgba(64,205,255,.45);
+    --grot:"Space Grotesk",-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --mono:"Space Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:var(--grot);font-weight:300;
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* film grain */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:998;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size:300px 300px;
+  }
+  /* scanlines */
+  body::after{
+    content:"";position:fixed;inset:0;z-index:999;pointer-events:none;opacity:.16;
+    background:repeating-linear-gradient(to bottom,transparent 0 2px,rgba(0,0,0,.5) 2px 3px);
+  }
+  ::selection{background:#2b2b28;color:#fff}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+
+  /* ---------- nav ---------- */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:1.1rem clamp(1.2rem,4vw,3rem);
+    background:linear-gradient(to bottom,rgba(10,10,10,.92),rgba(10,10,10,.72) 70%,transparent);
+    backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  }
+  nav .mark{font-family:var(--mono);font-size:1rem;letter-spacing:.04em}
+  nav ul{display:flex;gap:clamp(.9rem,2.5vw,2rem);list-style:none}
+  nav ul a{
+    font-family:var(--mono);font-size:.72rem;color:var(--dim);
+    letter-spacing:.12em;transition:color .2s;
+  }
+  nav ul a:hover{color:var(--ink);text-shadow:-1.5px 0 var(--red),1.5px 0 var(--cyan)}
+
+  /* ---------- hero ---------- */
+  header{
+    min-height:100svh;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+    position:relative;
+  }
+  .hero-text{
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding:clamp(1.2rem,4vw,3rem);padding-bottom:clamp(2.5rem,7vh,5.5rem);
+    position:relative;z-index:2;
+  }
+  .hero-kicker{
+    font-family:var(--mono);font-size:.72rem;color:var(--faint);
+    letter-spacing:.22em;margin-bottom:1.4rem;
+  }
+  h1.wordmark{
+    font-weight:600;letter-spacing:-.045em;line-height:.92;
+    font-size:clamp(4.5rem,16vw,11.5rem);
+    position:relative;width:fit-content;
+  }
+  h1.wordmark .glitch{position:relative;display:inline-block}
+  h1.wordmark .glitch::before,
+  h1.wordmark .glitch::after{
+    content:attr(data-t);position:absolute;inset:0;opacity:0;
+  }
+  h1.wordmark .glitch::before{color:transparent;text-shadow:-3px 0 var(--red);clip-path:inset(18% 0 52% 0)}
+  h1.wordmark .glitch::after{color:transparent;text-shadow:3px 0 var(--cyan);clip-path:inset(58% 0 12% 0)}
+  @keyframes slip{
+    0%,92%,100%{opacity:0;transform:none}
+    93%{opacity:1;transform:translateX(-2px)}
+    95%{opacity:1;transform:translateX(2px)}
+    97%{opacity:0}
+  }
+  h1.wordmark .glitch::before{animation:slip 7s infinite steps(1)}
+  h1.wordmark .glitch::after{animation:slip 7s 3.5s infinite steps(1)}
+  .hero-sub{
+    margin-top:1.6rem;max-width:30ch;
+    font-family:var(--mono);font-size:clamp(.8rem,1.4vw,.95rem);
+    color:var(--dim);letter-spacing:.06em;line-height:1.9;
+  }
+  .hero-meta{
+    margin-top:2.2rem;display:flex;gap:2rem;flex-wrap:wrap;
+    font-family:var(--mono);font-size:.68rem;color:var(--faint);letter-spacing:.18em;
+  }
+  .hero-img{position:relative;overflow:hidden}
+  .hero-img img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:saturate(.85) contrast(1.05)}
+  .hero-img::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(to right,var(--bg) 0,transparent 18%),
+               linear-gradient(to top,var(--bg) 0,transparent 30%);
+  }
+  .scroll-hint{
+    position:absolute;bottom:1.4rem;right:clamp(1.2rem,4vw,3rem);z-index:3;
+    font-family:var(--mono);font-size:.64rem;color:var(--faint);letter-spacing:.3em;
+    writing-mode:vertical-rl;
+  }
+
+  /* ---------- shared section chrome ---------- */
+  section{padding:clamp(4rem,10vh,7.5rem) clamp(1.2rem,4vw,3rem);scroll-margin-top:3.5rem;border-top:1px solid var(--line)}
+  .sec-head{
+    font-family:var(--mono);font-size:.72rem;color:var(--faint);
+    letter-spacing:.26em;margin-bottom:clamp(2rem,5vh,3.5rem);
+    display:flex;align-items:baseline;gap:1rem;
+  }
+  .sec-head::after{content:"";flex:1;height:1px;background:var(--line)}
+  .wrap{max-width:1200px;margin:0 auto}
+
+  /* ---------- stats ---------- */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .stat{background:var(--bg);padding:clamp(1.4rem,3vw,2.6rem)}
+  .stat b{
+    display:block;font-family:var(--grot);font-weight:500;
+    font-size:clamp(2rem,5vw,3.6rem);letter-spacing:-.03em;line-height:1.1;
+  }
+  .stat span{font-family:var(--mono);font-size:.68rem;color:var(--dim);letter-spacing:.18em}
+
+  /* ---------- bio ---------- */
+  .bio-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4.5rem);align-items:start}
+  .bio-short{
+    font-size:clamp(1.15rem,2.1vw,1.55rem);font-weight:300;line-height:1.65;color:var(--ink);
+  }
+  .bio-short em{font-style:normal;color:var(--dim)}
+  .bio-long{margin-top:2.6rem;columns:1;font-size:.95rem;color:var(--dim);line-height:1.85}
+  .bio-long p+p{margin-top:1.2em}
+  .bio-long strong{color:var(--ink);font-weight:500}
+  .bio-side img{filter:grayscale(1) contrast(1.06)}
+  .bio-side figcaption,figcaption{
+    font-family:var(--mono);font-size:.64rem;color:var(--faint);
+    letter-spacing:.16em;margin-top:.7rem;
+  }
+
+  /* ---------- sound ---------- */
+  .sound-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(2rem,5vw,4.5rem)}
+  .sp-embed{border:1px solid var(--line)}
+  .sp-embed iframe{display:block;width:100%;height:352px;border:0}
+  .releases{list-style:none}
+  .releases li{
+    display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+    padding:.95rem 0;border-bottom:1px solid var(--line);
+  }
+  .releases .t{font-weight:400;font-size:1.05rem;letter-spacing:-.01em}
+  .releases .m{font-family:var(--mono);font-size:.66rem;color:var(--faint);letter-spacing:.14em;text-align:right;white-space:nowrap}
+  .stream-links{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.6rem}
+  .pill{
+    font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--dim);
+    border:1px solid var(--line);padding:.55rem 1rem;transition:all .2s;
+  }
+  .pill:hover{color:var(--ink);border-color:var(--faint);text-shadow:-1.5px 0 var(--red),1.5px 0 var(--cyan)}
+
+  /* ---------- video ---------- */
+  .video-frame{position:relative;aspect-ratio:16/9;border:1px solid var(--line);background:#000}
+  .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .video-cap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:.8rem}
+
+  /* ---------- live ---------- */
+  .show{
+    display:grid;grid-template-columns:7rem minmax(0,1fr);gap:1.5rem;align-items:baseline;
+    padding:1.5rem 0;border-bottom:1px solid var(--line);
+  }
+  .show .date{font-family:var(--mono);font-size:.72rem;color:var(--faint);letter-spacing:.14em}
+  .show .venue{font-size:clamp(1.1rem,2.4vw,1.7rem);font-weight:400;letter-spacing:-.02em}
+  .show .sub{font-family:var(--mono);font-size:.68rem;color:var(--dim);letter-spacing:.12em;margin-top:.35rem;line-height:1.8}
+  .live-note{
+    margin-top:2.6rem;max-width:62ch;color:var(--dim);font-size:.95rem;line-height:1.85;
+  }
+  .live-note strong{color:var(--ink);font-weight:500}
+
+  /* ---------- photos ---------- */
+  .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(.8rem,2vw,1.6rem)}
+  .ph{position:relative}
+  .ph .frame{position:relative;overflow:hidden;background:var(--bg2)}
+  .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:saturate(.88) contrast(1.04);transition:transform .5s ease,filter .4s}
+  .ph.wide{grid-column:span 2}
+  .ph.wide img{aspect-ratio:16/10}
+  /* chromatic aberration on hover */
+  .ph .frame::before,.ph .frame::after{
+    content:"";position:absolute;inset:0;background-image:var(--src);
+    background-size:cover;background-position:center;
+    opacity:0;pointer-events:none;transition:opacity .25s;mix-blend-mode:screen;
+  }
+  .ph .frame::before{transform:translateX(-4px);background-color:#f03;background-blend-mode:multiply}
+  .ph .frame::after{transform:translateX(4px);background-color:#0cf;background-blend-mode:multiply}
+  .ph:hover .frame::before,.ph:hover .frame::after{opacity:.35}
+  .ph:hover img{transform:scale(1.015)}
+  .ph-meta{display:flex;justify-content:space-between;align-items:baseline;gap:.8rem;margin-top:.65rem}
+  .dl{
+    font-family:var(--mono);font-size:.62rem;color:var(--dim);letter-spacing:.14em;
+    border-bottom:1px solid var(--line);padding-bottom:.1rem;white-space:nowrap;
+  }
+  .dl:hover{color:var(--ink);border-color:var(--faint)}
+
+  /* ---------- contact ---------- */
+  .contact-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(2rem,5vw,4.5rem);align-items:end}
+  .contact q{
+    display:block;font-family:var(--mono);font-size:.8rem;color:var(--dim);
+    letter-spacing:.06em;margin-bottom:2.2rem;max-width:42ch;line-height:1.9;
+    quotes:"\201C" "\201D";
+  }
+  .email{
+    font-size:clamp(1.5rem,4.5vw,3.2rem);font-weight:400;letter-spacing:-.03em;
+    border-bottom:1px solid var(--line);padding-bottom:.3rem;width:fit-content;display:block;
+    transition:all .2s;word-break:break-all;
+  }
+  .email:hover{text-shadow:-2px 0 var(--red),2px 0 var(--cyan);border-color:var(--faint)}
+  .socials{margin-top:2.4rem;display:flex;flex-wrap:wrap;gap:.6rem}
+  .contact-side img{filter:saturate(.9)}
+  footer{
+    border-top:1px solid var(--line);
+    padding:2rem clamp(1.2rem,4vw,3rem) 2.6rem;
+    display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+    font-family:var(--mono);font-size:.62rem;color:var(--faint);letter-spacing:.16em;
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    header{grid-template-columns:1fr;grid-template-rows:62svh auto}
+    .hero-img{order:-1}
+    .hero-img::after{background:linear-gradient(to top,var(--bg) 0,transparent 45%)}
+    .hero-text{padding-top:0;margin-top:-4.5rem;padding-bottom:3rem}
+    .scroll-hint{display:none}
+    .bio-grid,.sound-grid,.contact-grid{grid-template-columns:1fr}
+    .photo-grid{grid-template-columns:repeat(2,1fr)}
+    .ph.wide{grid-column:span 2}
+    .stats{grid-template-columns:1fr 1fr}
+    .stat:last-child{grid-column:span 2}
+    nav ul li.hide-sm{display:none}
+    .show{grid-template-columns:5.4rem minmax(0,1fr);gap:1rem}
+    .ph-meta{flex-direction:column;align-items:flex-start;gap:.35rem}
+    .ph-meta figcaption{letter-spacing:.1em}
+  }
+  @media (prefers-reduced-motion:reduce){
+    h1.wordmark .glitch::before,h1.wordmark .glitch::after{animation:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="mark" href="#top">nomu.</a>
+  <ul>
+    <li><a href="#bio">bio</a></li>
+    <li><a href="#sound">sound</a></li>
+    <li class="hide-sm"><a href="#video">video</a></li>
+    <li><a href="#live">live</a></li>
+    <li><a href="#photos">photos</a></li>
+    <li><a href="#contact">contact</a></li>
+  </ul>
+</nav>
+
+<header id="top">
+  <div class="hero-text">
+    <div class="hero-kicker">electronic press kit — 2026</div>
+    <h1 class="wordmark"><span class="glitch" data-t="nomu.">nomu.</span></h1>
+    <p class="hero-sub">hyperpop / glitch-pop / experimental electronic — seattle, wa</p>
+    <div class="hero-meta">
+      <span>3.6m streams / yr</span>
+      <span>56k monthly listeners</span>
+      <span>independent</span>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="assets/img/nomu-7164.jpg" alt="nomu performing live, the cobalt, vancouver bc" fetchpriority="high">
+  </div>
+  <div class="scroll-hint">scroll ↓</div>
+</header>
+
+<section id="stats" style="border-top:none;padding-top:0">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>3.6m</b><span>spotify streams, past 12 months</span></div>
+      <div class="stat"><b>56k</b><span>monthly listeners</span></div>
+      <div class="stat"><b>100%</b><span>independent — self-written, produced &amp; released</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="bio">
+  <div class="wrap">
+    <div class="sec-head">01 — bio</div>
+    <div class="bio-grid">
+      <div>
+        <p class="bio-short">
+          nomu. is a Seattle-based artist and producer working the seam between
+          hyperpop, glitch-pop, and experimental electronic music. Fully independent
+          and self-published, he has drawn 3.6 million Spotify streams in the past
+          year behind the 2025 album <em>Sequence 01</em> and the singles
+          “Medicine,” “Waste,” and “Bite” (with crusey). Rooted in the post-hyperpop
+          internet underground alongside collaborators dolly, SEBii, and SHYSHY, he
+          performs with live autotuned vocals and realtime glitch and datamosh
+          visuals he coded himself — a one-person operation, equal parts pop
+          instinct and broken signal.
+        </p>
+        <div class="bio-long">
+          <p><strong>nomu.</strong> builds his world alone, on purpose. The
+          Vietnamese-American artist writes, records, produces, mixes, and masters
+          everything himself, then codes the realtime glitch and datamosh visuals
+          that run behind his live sets. What comes out is a fully self-contained
+          aesthetic — near-black, high-contrast, dark avant-garde — internet-born
+          but precisely tailored.</p>
+          <p>Raised in Folsom, California and seasoned around the Bay Area, he came
+          up inside the 2019–2020 digicore and hyperpop internet scene, trading
+          tracks with <strong>dolly, SEBii, SHYSHY, AMARU,</strong> and
+          <strong>crusey</strong> and releasing alongside the era’s online
+          collectives. The DIY ethos stuck: no tutorials, no template — the process
+          itself is the sound.</p>
+          <p>His 2025 album <strong>Sequence 01</strong> was written largely in
+          sleepless overnight sessions and arrived unannounced — then connected:
+          3.6 million Spotify streams in the past year and 56,000 monthly
+          listeners, with no label and no machine behind it. The singles
+          “Medicine,” “Waste,” and “Bite” (with crusey) push the catalog further
+          toward its edges — melody pressed through distortion until both give.</p>
+          <p>Live, nomu. performs with autotuned vocals over custom-built visuals
+          that glitch and datamosh in real time, with recent dates at
+          <strong>Water &amp; Power</strong> (Los Angeles), <strong>Chop
+          Suey</strong> (Seattle), and <strong>The Cobalt</strong> (Vancouver BC),
+          and earlier bills alongside osquinn, blackwinterwells, and i9bonsai.
+          Now settled in the Pacific Northwest, he is set on building Seattle’s
+          experimental electronic scene alongside artists like mental — his
+          standing offer: “if anybody is throwing a show or anything in Seattle,
+          just hit me up.”</p>
+        </div>
+      </div>
+      <div class="bio-side">
+        <figure>
+          <img src="assets/img/nomu-7147.jpg" alt="nomu, black and white live portrait">
+          <figcaption>the cobalt, vancouver bc — 05.2026</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sound">
+  <div class="wrap">
+    <div class="sec-head">02 — sound</div>
+    <div class="sound-grid">
+      <div>
+        <div class="sp-embed">
+          <iframe src="https://open.spotify.com/embed/artist/2NSBzBPu05xNzAUv10mdTc?utm_source=generator&theme=0"
+            title="nomu. on spotify" loading="lazy"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+        <div class="stream-links">
+          <a class="pill" href="https://open.spotify.com/artist/2NSBzBPu05xNzAUv10mdTc" target="_blank" rel="noopener">spotify</a>
+          <a class="pill" href="https://music.apple.com/us/artist/nomu/1009107617" target="_blank" rel="noopener">apple music</a>
+          <a class="pill" href="https://soundcloud.com/whereisnomu" target="_blank" rel="noopener">soundcloud</a>
+        </div>
+      </div>
+      <div>
+        <ul class="releases">
+          <li><span class="t">sequence 01</span><span class="m">debut album — 2025</span></li>
+          <li><span class="t">bite <span style="color:var(--faint)">w/ crusey</span></span><span class="m">single — 2026</span></li>
+          <li><span class="t">rush <span style="color:var(--faint)">w/ scrobaby · ncs</span></span><span class="m">single — 2025</span></li>
+          <li><span class="t">medicine <span style="color:var(--faint)">w/ scrobaby</span></span><span class="m">single — 2024</span></li>
+          <li><span class="t">waste</span><span class="m">single</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="video">
+  <div class="wrap">
+    <div class="sec-head">03 — video</div>
+    <div class="video-frame">
+      <iframe src="https://www.youtube-nocookie.com/embed/diFCHYeS8tg"
+        title="nomu — all of it ft. mental (music video)" loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+    <div class="video-cap">
+      <figcaption>“all of it” ft. mental — official video</figcaption>
+      <a class="dl" href="https://youtu.be/b4Gw4XlHBwg" target="_blank" rel="noopener">watch interview ↗</a>
+    </div>
+  </div>
+</section>
+
+<section id="live">
+  <div class="wrap">
+    <div class="sec-head">04 — live</div>
+    <div class="show">
+      <span class="date">05.24.2026</span>
+      <div>
+        <div class="venue">the cobalt</div>
+        <div class="sub">vancouver, bc — w/ mykissera, alice’s corpse, 2girls1daw</div>
+      </div>
+    </div>
+    <div class="show">
+      <span class="date">04.29.2026</span>
+      <div>
+        <div class="venue">chop suey</div>
+        <div class="sub">seattle, wa — w/ keanu., rsieh raxan, zarallanie</div>
+      </div>
+    </div>
+    <div class="show">
+      <span class="date">04.24.2026</span>
+      <div>
+        <div class="venue">water &amp; power</div>
+        <div class="sub">los angeles, ca — problem child presents “first forever,” w/ rsieh raxan, aidn., neonvedas</div>
+      </div>
+    </div>
+    <div class="show">
+      <span class="date">07.05.2025</span>
+      <div>
+        <div class="venue">hypermania — makeoutmusic</div>
+        <div class="sub">los angeles, ca — w/ funeral, aftrr, scottryan</div>
+      </div>
+    </div>
+    <div class="show">
+      <span class="date">02.28.2025</span>
+      <div>
+        <div class="venue">sounds for palestine — the che café</div>
+        <div class="sub">san diego, ca — benefit w/ saoirse dream, ezcodylee, slafter + more</div>
+      </div>
+    </div>
+    <div class="show">
+      <span class="date">04.19.2024</span>
+      <div>
+        <div class="venue">the troubadour</div>
+        <div class="sub">los angeles, ca — w/ osquinn, reserv, sg lily, kid sora, saturn</div>
+      </div>
+    </div>
+    <div class="show">
+      <span class="date">02.24.2023</span>
+      <div>
+        <div class="venue">zombii freakshow — dna lounge</div>
+        <div class="sub">san francisco, ca — w/ i9bonsai</div>
+      </div>
+    </div>
+    <div class="show">
+      <span class="date">01.07.2023</span>
+      <div>
+        <div class="venue">same page fest — catch one</div>
+        <div class="sub">los angeles, ca — w/ blackwinterwells, i9bonsai, babebee, bhertuy + more</div>
+      </div>
+    </div>
+    <p class="live-note">
+      nomu. performs with <strong>live autotuned vocals</strong> over
+      <strong>custom-built realtime glitch / datamosh visuals</strong> he coded
+      himself — every set rendered live, never canned.
+    </p>
+  </div>
+</section>
+
+<section id="photos">
+  <div class="wrap">
+    <div class="sec-head">05 — press photos</div>
+    <div class="photo-grid">
+      <div class="ph">
+        <div class="frame" style="--src:url('assets/img/nomu-portrait.jpg')">
+          <img src="assets/img/nomu-portrait.jpg" alt="nomu, flash portrait, hand over face" loading="lazy">
+        </div>
+        <div class="ph-meta"><figcaption>portrait — vancouver bc</figcaption>
+          <a class="dl" href="assets/hires/nomu-portrait.jpg" download>download ↓</a></div>
+      </div>
+      <div class="ph">
+        <div class="frame" style="--src:url('assets/img/nomu-7377.jpg')">
+          <img src="assets/img/nomu-7377.jpg" alt="nomu, flash portrait facing camera, the cobalt" loading="lazy">
+        </div>
+        <div class="ph-meta"><figcaption>portrait — the cobalt</figcaption>
+          <a class="dl" href="assets/hires/nomu-7377.jpg" download>download ↓</a></div>
+      </div>
+      <div class="ph">
+        <div class="frame" style="--src:url('assets/img/nomu-7273.jpg')">
+          <img src="assets/img/nomu-7273.jpg" alt="nomu in front of nomu. backdrop" loading="lazy">
+        </div>
+        <div class="ph-meta"><figcaption>live — vancouver bc</figcaption>
+          <a class="dl" href="assets/hires/nomu-7273.jpg" download>download ↓</a></div>
+      </div>
+      <div class="ph wide">
+        <div class="frame" style="--src:url('assets/img/nomu-7209.jpg')">
+          <img src="assets/img/nomu-7209.jpg" alt="nomu live on stage, wide shot with haze" loading="lazy">
+        </div>
+        <div class="ph-meta"><figcaption>live — the cobalt, vancouver bc</figcaption>
+          <a class="dl" href="assets/hires/nomu-7209.jpg" download>download ↓</a></div>
+      </div>
+      <div class="ph">
+        <div class="frame" style="--src:url('assets/img/nomu-7162.jpg')">
+          <img src="assets/img/nomu-7162.jpg" alt="abstract glitch lights over gear" loading="lazy">
+        </div>
+        <div class="ph-meta"><figcaption>signal — vancouver bc</figcaption>
+          <a class="dl" href="assets/hires/nomu-7162.jpg" download>download ↓</a></div>
+      </div>
+      <div class="ph wide">
+        <div class="frame" style="--src:url('assets/img/nomu-la-problemchild.jpg')">
+          <img src="assets/img/nomu-la-problemchild.jpg" alt="group photo outside los angeles show" loading="lazy">
+        </div>
+        <div class="ph-meta"><figcaption>scene — los angeles</figcaption>
+          <a class="dl" href="assets/hires/nomu-la-problemchild.jpg" download>download ↓</a></div>
+      </div>
+      <div class="ph">
+        <div class="frame" style="--src:url('assets/img/nomu-seattle-chopsuey.jpg')">
+          <img src="assets/img/nomu-seattle-chopsuey.jpg" alt="nomu live at chop suey, seattle" loading="lazy">
+        </div>
+        <div class="ph-meta"><figcaption>live — chop suey, seattle</figcaption>
+          <a class="dl" href="assets/hires/nomu-seattle-chopsuey.jpg" download>download ↓</a></div>
+      </div>
+      <div class="ph">
+        <div class="frame" style="--src:url('assets/img/nomu-7164.jpg')">
+          <img src="assets/img/nomu-7164.jpg" alt="nomu live, purple wash, the cobalt" loading="lazy">
+        </div>
+        <div class="ph-meta"><figcaption>live — the cobalt</figcaption>
+          <a class="dl" href="assets/hires/nomu-7164.jpg" download>download ↓</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">06 — contact / booking</div>
+    <div class="contact-grid">
+      <div class="contact">
+        <q>if anybody is throwing a show or anything in seattle, just hit me up</q>
+        <a class="email" href="mailto:whereisnomu@gmail.com">whereisnomu@gmail.com</a>
+        <div class="socials">
+          <a class="pill" href="https://instagram.com/whereisnomu" target="_blank" rel="noopener">instagram</a>
+          <a class="pill" href="https://x.com/whereisnomu" target="_blank" rel="noopener">x / twitter</a>
+          <a class="pill" href="https://soundcloud.com/whereisnomu" target="_blank" rel="noopener">soundcloud</a>
+          <a class="pill" href="https://linktr.ee/whereisnomu" target="_blank" rel="noopener">linktree</a>
+        </div>
+      </div>
+      <div class="contact-side">
+        <figure>
+          <img src="assets/img/nomu-prof-pic.jpg" alt="nomu profile picture" loading="lazy">
+          <figcaption>nomu. — @whereisnomu, everywhere</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>nomu. — electronic press kit, 2026</span>
+  <span>high-res photos via the ↓ links above</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+.venv-whisper/
+.claude/
+.DS_Store
+nomu-interview-transcript*
+photo-shortlist.jpg
