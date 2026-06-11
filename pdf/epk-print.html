@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>nomu. — epk one-sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0a; --ink:#e8e8e6; --dim:#a3a39f; --faint:#62625e; --line:#242422;
+    --grot:"Space Grotesk",Helvetica,Arial,sans-serif;
+    --mono:"Space Mono",Menlo,monospace;
+  }
+  @page{size:letter;margin:0}
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html,body{width:8.5in;height:11in}
+  body{
+    background:var(--bg);color:var(--ink);font-family:var(--grot);font-weight:300;
+    padding:.55in .6in .5in;display:flex;flex-direction:column;
+  }
+  .mono{font-family:var(--mono)}
+
+  /* header */
+  header{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:.22in;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:6.5pt;letter-spacing:.22em;color:var(--faint);margin-bottom:8pt}
+  h1{font-size:46pt;font-weight:600;letter-spacing:-.04em;line-height:.85}
+  .sub{font-family:var(--mono);font-size:7.5pt;color:var(--dim);letter-spacing:.1em;margin-top:9pt}
+  .stats{text-align:right;font-family:var(--mono);font-size:7.5pt;color:var(--dim);letter-spacing:.08em;line-height:2.1}
+  .stats b{color:var(--ink);font-weight:700}
+
+  /* photo band */
+  .band{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:8pt;margin:.18in 0}
+  .band img{width:100%;height:1.98in;object-fit:cover;display:block;filter:saturate(.88) contrast(1.04)}
+  .band .cap{font-family:var(--mono);font-size:5.8pt;color:var(--faint);letter-spacing:.14em;margin-top:4pt}
+
+  /* columns */
+  .cols{display:grid;grid-template-columns:1.15fr .85fr;gap:.3in;flex:1;min-height:0}
+  .sec{font-family:var(--mono);font-size:6.5pt;letter-spacing:.24em;color:var(--faint);margin:.13in 0 .08in;display:flex;align-items:baseline;gap:8pt}
+  .sec::after{content:"";flex:1;height:1px;background:var(--line)}
+  .sec:first-child{margin-top:0}
+  .bio{font-size:8.4pt;line-height:1.58;color:var(--dim)}
+  .bio strong{color:var(--ink);font-weight:500}
+
+  .rel{width:100%;border-collapse:collapse}
+  .rel td{font-size:8pt;padding:3.2pt 0;border-bottom:1px solid var(--line);color:var(--ink)}
+  .rel td.m{font-family:var(--mono);font-size:6.4pt;color:var(--faint);text-align:right;letter-spacing:.1em;white-space:nowrap}
+  .rel td .w{color:var(--faint)}
+
+  .show{display:grid;grid-template-columns:.62in 1fr;gap:7pt;padding:3pt 0;align-items:baseline}
+  .show .d{font-family:var(--mono);font-size:6.2pt;color:var(--faint);letter-spacing:.06em}
+  .show .v{font-size:8.2pt;color:var(--ink)}
+  .show .v span{font-family:var(--mono);font-size:6.2pt;color:var(--faint);letter-spacing:.06em;display:block;margin-top:1pt}
+
+  .rider{border:1px solid var(--line);padding:8pt 10pt}
+  .rider div{font-family:var(--mono);font-size:6.6pt;color:var(--dim);line-height:1.7;padding-left:9pt;text-indent:-9pt}
+  .rider div::before{content:"— ";color:var(--faint)}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);margin-top:.18in;padding-top:.14in;display:flex;justify-content:space-between;align-items:center;gap:.25in}
+  .email{font-size:16.5pt;font-weight:400;letter-spacing:-.02em}
+  .links{font-family:var(--mono);font-size:6.4pt;color:var(--dim);letter-spacing:.1em;line-height:2;margin-top:4pt}
+  .links b{color:var(--ink);font-weight:400}
+  .qr{display:flex;align-items:center;gap:8pt}
+  .qr img{width:.78in;height:.78in}
+  .qr .q{font-family:var(--mono);font-size:5.8pt;color:var(--faint);letter-spacing:.12em;line-height:1.8;text-align:right}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="kicker">electronic press kit — 2026</div>
+    <h1>nomu.</h1>
+    <div class="sub">hyperpop / glitch-pop / experimental electronic — seattle, wa</div>
+  </div>
+  <div class="stats">
+    <b>3.6m</b> spotify streams, past 12 months<br>
+    <b>56k</b> monthly listeners<br>
+    <b>100%</b> independent — self-released
+  </div>
+</header>
+
+<div class="band">
+  <div>
+    <img src="img/nomu-7209.jpg" alt="">
+    <div class="cap">live — the cobalt, vancouver bc</div>
+  </div>
+  <div>
+    <img src="img/nomu-7164.jpg" alt="" style="object-position:50% 20%">
+    <div class="cap">the cobalt — vancouver bc</div>
+  </div>
+  <div>
+    <img src="img/nomu-1934.jpg" alt="">
+    <div class="cap">live — realtime visuals</div>
+  </div>
+</div>
+
+<div class="cols">
+  <div>
+    <div class="sec">bio</div>
+    <p class="bio">
+      <strong>nomu.</strong> is a Seattle-based hyperpop artist and producer.
+      Outside of collaborations, he writes, records, produces, mixes, and
+      masters everything himself, and has released all of it independently —
+      most recently the 2025 debut album <strong>Sequence 01</strong> and
+      singles with crusey and scrobaby. The past year brought 3.6 million
+      Spotify streams and 56,000 monthly listeners, with no label or management
+      behind him. He came up in the 2019–2020 digicore scene alongside dolly,
+      SEBii, and SHYSHY, and performs with live autotuned vocals over realtime
+      glitch and datamosh visuals he coded himself.
+    </p>
+
+    <div class="sec">selected releases</div>
+    <table class="rel">
+      <tr><td>sequence 01</td><td class="m">debut album — 2025</td></tr>
+      <tr><td>bite <span class="w">w/ crusey</span></td><td class="m">single — 2026</td></tr>
+      <tr><td>rush <span class="w">w/ scrobaby · ncs</span></td><td class="m">single — 2025</td></tr>
+      <tr><td>medicine <span class="w">w/ scrobaby</span></td><td class="m">single — 2024</td></tr>
+    </table>
+
+    <div class="sec">tech rider</div>
+    <div class="rider">
+      <div>full set runs from a macbook + focusrite scarlett 2i2 — no backline needed</div>
+      <div>venue provides: one xlr vocal mic + stand, feed from two ¼″ line outs to foh</div>
+      <div>dual-mono split available — vocals left, track right — for independent leveling</div>
+      <div>realtime visuals from a separate laptop — hdmi to projector or screen, where available</div>
+    </div>
+  </div>
+
+  <div>
+    <div class="sec">live</div>
+    <div class="show"><span class="d">05.24.26</span><span class="v">the cobalt — vancouver, bc<span>w/ mykissera, alice’s corpse, 2girls1daw</span></span></div>
+    <div class="show"><span class="d">04.29.26</span><span class="v">chop suey — seattle, wa<span>w/ keanu., rsieh raxan, zarallanie</span></span></div>
+    <div class="show"><span class="d">04.24.26</span><span class="v">water &amp; power — los angeles, ca<span>problem child presents “first forever”</span></span></div>
+    <div class="show"><span class="d">07.05.25</span><span class="v">makeoutmusic — los angeles, ca<span>“hypermania” w/ funeral, aftrr, scottryan</span></span></div>
+    <div class="show"><span class="d">02.28.25</span><span class="v">the che café — san diego, ca<span>sounds for palestine benefit</span></span></div>
+    <div class="show"><span class="d">04.19.24</span><span class="v">the troubadour — los angeles, ca<span>w/ osquinn, reserv, sg lily, kid sora, saturn</span></span></div>
+    <div class="show"><span class="d">02.24.23</span><span class="v">dna lounge — san francisco, ca<span>“zombii freakshow” w/ i9bonsai</span></span></div>
+    <div class="show"><span class="d">01.07.23</span><span class="v">catch one — los angeles, ca<span>same page fest w/ blackwinterwells, i9bonsai + more</span></span></div>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="email">whereisnomu@gmail.com</div>
+    <div class="links">
+      <b>@whereisnomu</b> — instagram · x · soundcloud&nbsp;&nbsp;/&nbsp;&nbsp;spotify + apple music: <b>nomu.</b>&nbsp;&nbsp;/&nbsp;&nbsp;linktr.ee/whereisnomu
+    </div>
+  </div>
+  <div class="qr">
+    <div class="q">full epk + hi-res photos<br>xandyngox.github.io/epk</div>
+    <img src="img/qr.png" alt="qr code to web epk">
+  </div>
+</footer>
+
+</body>
+</html>
